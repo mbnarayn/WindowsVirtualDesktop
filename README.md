@@ -1,4 +1,4 @@
-# WindowsVirtualDesktop
+# Windows Virtual Desktop
 
 Creating a tenant in Windows Virtual Desktop is the first step toward building your desktop virtualization solution. A tenant is a group of one or more host pools.
 
