@@ -41,3 +41,11 @@ The Get-RdsHostPool cmdlet gets the properties of the specified host pool. If yo
 `Add-RdsAppGroupUser <tenantname> <hostpoolname> "Desktop Application Group" -UserPrincipalName <userupn>`
 
 The user’s UPN should match the user’s identity in Azure Active Directory (for example, user1@contoso.com). If you want to add multiple users, you must run this cmdlet for each user.
+
+**Disable new connections to a session host (aka, set the host to drain mode)**
+
+`Set-RdsSessionHost -TenantName "contoso" -HostPoolName "contosoHostPool" -Name "sh1.contoso.com" -AllowNewSession $false`
+
+**Enable new connections to a session host (aka, remove the host from drain mode)**
+
+`Set-RdsSessionHost -TenantName "contoso" -HostPoolName "contosoHostPool" -Name "sh1.contoso.com" -AllowNewSession $true`
