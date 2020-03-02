@@ -22,7 +22,7 @@ Host Pools in 'Pooled' mode supports two load-balancing methods. Each method det
 
 - Depth-first load balancing allows you to saturate a session host with user sessions in a host pool. Once the first session reaches its session limit threshold, the load balancer directs any new user connections to the next session host in the host pool until it reaches its limit, and so on.
 
-### Persistent or Personsal Host Pool
+### Persistent/Personal Host Pool
 
 A Persistent or Personal host pool supports two user assignment types:
 
