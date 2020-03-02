@@ -50,13 +50,13 @@ The Add-RdsAccount cmdlet adds an authenticated account to use for Windows Virtu
 
 The Get-RdsHostPool cmdlet gets the properties of the specified host pool. If you do not specify a host pool, this cmdlet returns properties for all host pools in the specified tenant authorized for the current user.
 
-### View administrative access for a WVD Tenant
+### View administrative access for a Windows Virtual Desktop Tenant
 
 `Get-RdsRoleAssignment -TenantName yourtenantname`
 
 The Get-RdsRoleAssignment cmdlet lists all role assignments such as RDS Owner, RDS Contributor, RDS Reader and RDS Operator.
 
-
+### Assign RDS Owner administrative access to a Windows Virtual Desktop Tenant
 
 `New-RdsRoleAssignment -TenantName yourtenantname -SignInName username@contoso.onmicrosoft.com -RoleDefinitionName "RDS Owner"`
 
