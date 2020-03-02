@@ -39,6 +39,10 @@ Windows Virtual Desktop Consent Page
 https://rdweb.wvd.microsoft.com/
 
 `Add-RdsAccount -DeploymentUrl "https://rdbroker.wvd.microsoft.com"`
+
 `Get-RdsHostPool -TenantName yourtenantname`
+
 `Get-RdsRoleAssignment -TenantName yourtenantname`
+
 `New-RdsRoleAssignment -TenantName yourtenantname -SignInName username@contoso.onmicrosoft.com -RoleDefinitionName "RDS Owner"`
+
