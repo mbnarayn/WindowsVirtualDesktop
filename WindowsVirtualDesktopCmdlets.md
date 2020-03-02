@@ -16,6 +16,10 @@
 
 `Add-RdsAccount -DeploymentUrl "https://rdbroker.wvd.microsoft.com"`
 
+**Get all Windows Virtual Desktop tenants in the current context**
+
+`Get-RdsTenant`
+
 **View the role assignments on a Windows Virtual Desktop Tenant**
 
 `Get-RdsRoleAssignment -TenantName yourtenantname`
@@ -51,7 +55,15 @@ The user’s UPN should match the user’s identity in Azure Active Directory (f
 `Set-RdsSessionHost -TenantName "contoso" -HostPoolName "contosoHostPool" -Name "sh1.contoso.com" -AllowNewSession $false`
 
 **Enable new connections to a session host (aka, remove the host from drain mode)**
-
 `Set-RdsSessionHost -TenantName "contoso" -HostPoolName "contosoHostPool" -Name "sh1.contoso.com" -AllowNewSession $true`
+
+**Configure a host pool to perform breadth-first load balancing and to use a new maximum session limit**
+`Set-RdsHostPool <tenantname> <hostpoolname> -BreadthFirstLoadBalancer -MaxSessionLimit ###`
+
+**Configure a host pool to perform depth-first load balancing**
+`Set-RdsHostPool <tenantname> <hostpoolname> -DepthFirstLoadBalancer -MaxSessionLimit ###`
+
+
+
 
 
