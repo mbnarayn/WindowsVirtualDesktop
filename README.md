@@ -30,4 +30,11 @@ A Persistent or Personal host pool supports two user assignment types:
 
 - Automatic assignment is the default assignment type for new personal desktop host pools created in your Windows Virtual Desktop environment. To automatically assign users, first assign them to the personal desktop host pool so that they can see the desktop in their feed. Users are auto-assigned an available  session host during the first logon and any subsequent logins are directed to the same VM. Unlike multi user session, persistence follows a 1:1 mapping between users and session hosts. For Example: if the Host Pool has ten VM’s, they will be assigned to the first ten users and the eleventh user will get an error that enough resources (VMs) are unavailable.
 
- - Unlike automatic assignment, when you use direct assignment, you must assign the user to both the personal desktop host pool and a specific session host before they can connect to their personal desktop. If the user is only assigned to a host pool without a session host assignment, they won't be able to access resources. 
+ - Unlike automatic assignment, when you use direct assignment, you must assign the user to both the personal desktop host pool and a specific session host before they can connect to their personal desktop. If the user is only assigned to a host pool without a session host assignment, they won't be able to access resources.
+ 
+## PowerShell Commands and URLs
+
+Windows Virtual Desktop Consent Page
+
+https://rdweb.wvd.microsoft.com/
+
