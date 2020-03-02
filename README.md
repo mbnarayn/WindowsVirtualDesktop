@@ -79,3 +79,10 @@ The Get-RdsRoleAssignment cmdlet lists all role assignments such as RDS Owner, R
 
 `Import-Module -Name Microsoft.RDInfra.RDPowerShell`
 
+**Update the Windows Virtual Desktop PowerShell module**
+
+`Update-Module -Name Microsoft.RDInfra.RDPowerShell`
+
+
+
+
