@@ -81,7 +81,7 @@ The Get-RdsRoleAssignment cmdlet lists all role assignments such as RDS Owner, R
 
 `Add-RdsAccount -DeploymentUrl "https://rdbroker.wvd.microsoft.com"`
 
-**Add users to the desktop application group**
+**Add Users to an App Group**
 
 `Add-RdsAppGroupUser <tenantname> <hostpoolname> "Desktop Application Group" -UserPrincipalName <userupn>`
 
