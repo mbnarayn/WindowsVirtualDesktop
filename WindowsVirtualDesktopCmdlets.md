@@ -20,7 +20,7 @@
 
 `Get-RdsRoleAssignment -TenantName yourtenantname`
 
-OR
+or
 
 `Get-RdsRoleAssignment`
 
