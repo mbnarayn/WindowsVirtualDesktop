@@ -9,3 +9,9 @@ The high level components that make up Windows Virtual Desktop are a Tenant Grou
 - Host Pool - Host pools are a collection of one or more identical virtual machines running as session hosts in Azure and registered to a Windows Virtual Desktop tenant. Each host pool will contain an app group that end users can interact with.  
 
 - App Groups - Each host pool consists of one or more app groups that are used to publish remote desktop and remote application resources to users. The default app group "Desktop Application Group" created for a new Windows Virtual Desktop (WVD) Host Pool provides the full desktop experience. In addition, you can create one or more RemoteApp application groups for the host pool to provide an app only experience without overwhelming the user with a full blown desktop experience. 
+
+## Windows Virtual Desktop Load Balancing
+
+Windows Virtual Desktop host pools can deployed in one of two different modes, Pooled or Persistent (also known as Personal).
+
+With a 'Pooled' host pool users are directed to the best available session host in the pool and to utilize shared multi-session virtual machines. With a 'Persistent' host pool users have their own virtual machine always have a 1:1 mapping to a session host within the host pool.
