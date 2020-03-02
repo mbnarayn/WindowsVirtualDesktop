@@ -32,11 +32,15 @@ A Persistent or Personal host pool supports two user assignment types:
 
  - Unlike automatic assignment, when you use direct assignment, you must assign the user to both the personal desktop host pool and a specific session host before they can connect to their personal desktop. If the user is only assigned to a host pool without a session host assignment, they won't be able to access resources.
  
-## PowerShell Commands and URLs
+## URLs
 
-Windows Virtual Desktop Consent Page
+Windows Virtual Desktop Consent Page https://rdweb.wvd.microsoft.com/
 
-https://rdweb.wvd.microsoft.com/
+## PowerShell Commands
+
+### Adds an authenticated account to use for Windows Virtual Desktop cmdlet requests
+
+The Add-RdsAccount cmdlet adds an authenticated account to use for Windows Virtual Desktop cmdlet requests. Upon completion, the context is automatically set to use the "Default Tenant Group" as the tenant group name. You can run the Set-RdsContext cmdlet to change the context.
 
 `Add-RdsAccount -DeploymentUrl "https://rdbroker.wvd.microsoft.com"`
 
