@@ -69,13 +69,13 @@ The Get-RdsRoleAssignment cmdlet lists all role assignments such as RDS Owner, R
 
 `New-RdsRoleAssignment -TenantName yourtenantname -SignInName username@contoso.onmicrosoft.com -RoleDefinitionName "RDS Owner"`
 
-Windows Virtual Desktop Cmdlets for Windows PowerShell
+## Windows Virtual Desktop Cmdlets for Windows PowerShell
 
-- Install the Windows Virtual Desktop PowerShell module
+**Install the Windows Virtual Desktop PowerShell module**
 
 `Install-Module -Name Microsoft.RDInfra.RDPowerShell`
 
-- Import the Windows Virtual Desktop PowerShell module (If necessary)
+**Import the Windows Virtual Desktop PowerShell module (If necessary)**
 
 `Import-Module -Name Microsoft.RDInfra.RDPowerShell`
 
