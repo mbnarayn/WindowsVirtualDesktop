@@ -16,8 +16,18 @@ Windows Virtual Desktop host pools can deployed in one of two different modes, P
 
 With a 'Pooled' host pool users are directed to the best available session host in the pool and to utilize shared multi-session virtual machines. With a 'Persistent' host pool users have their own virtual machine always have a 1:1 mapping to a session host within the host pool.
 
+# Pooled Host Pool
+
 Host Pools in 'Pooled' mode supports two load-balancing methods. Each method determines which session host will host a user’s session when they connect to a resource in a host pool.
 
 Breadth-first load balancing allows you to evenly distribute user sessions across the session hosts in a host pool.
 
 Depth-first load balancing allows you to saturate a session host with user sessions in a host pool. Once the first session reaches its session limit threshold, the load balancer directs any new user connections to the next session host in the host pool until it reaches its limit, and so on.
+
+# Persistent or Personsal Host Pool
+
+A Persistent or Personal host pool supports two user assignment types.
+
+Automatic assignment is the default assignment type for new personal desktop host pools created in your Windows Virtual Desktop environment. To automatically assign users, first assign them to the personal desktop host pool so that they can see the desktop in their feed. Users are auto-assigned an available  session host during the first logon and any subsequent logins are directed to the same VM. Unlike multi user session, persistence follows a 1:1 mapping between users and session hosts. For Example: if the Host Pool has ten VM’s, they will be assigned to the first ten users and the eleventh user will get an error that enough resources (VMs) are unavailable.
+
+Unlike automatic assignment, when you use direct assignment, you must assign the user to both the personal desktop host pool and a specific session host before they can connect to their personal desktop. If the user is only assigned to a host pool without a session host assignment, they won't be able to access resources. 
