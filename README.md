@@ -38,13 +38,17 @@ Windows Virtual Desktop Consent Page https://rdweb.wvd.microsoft.com/
 
 ## PowerShell Commands
 
-### Adds an authenticated account to use for Windows Virtual Desktop cmdlet requests
-
-The Add-RdsAccount cmdlet adds an authenticated account to use for Windows Virtual Desktop cmdlet requests. Upon completion, the context is automatically set to use the "Default Tenant Group" as the tenant group name. You can run the Set-RdsContext cmdlet to change the context.
+### Add an authenticated account to use for Windows Virtual Desktop cmdlet requests
 
 `Add-RdsAccount -DeploymentUrl "https://rdbroker.wvd.microsoft.com"`
 
+The Add-RdsAccount cmdlet adds an authenticated account to use for Windows Virtual Desktop cmdlet requests. Upon completion, the context is automatically set to use the "Default Tenant Group" as the tenant group name. You can run the Set-RdsContext cmdlet to change the context.
+
+### Get properties of a Host Pool
+
 `Get-RdsHostPool -TenantName yourtenantname`
+
+The Get-RdsHostPool cmdlet gets the properties of the specified host pool. If you do not specify a host pool, this cmdlet returns properties for all host pools in the specified tenant authorized for the current user.
 
 `Get-RdsRoleAssignment -TenantName yourtenantname`
 
