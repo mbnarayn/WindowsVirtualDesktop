@@ -66,6 +66,12 @@ The user’s UPN should match the user’s identity in Azure Active Directory (f
 
 `Set-RdsHostPool <tenantname> <hostpoolname> -DepthFirstLoadBalancer -MaxSessionLimit ###`
 
+**Delete a Host Pool**
+
+`Remove-RdsHostPool -TenantName "contoso" -Name "contosoHostPool"`
+
+You must first remove all session hosts and app groups associated with the host pool before running this command.
+
 
 
 
