@@ -46,50 +46,6 @@ A Persistent or Personal host pool supports two user assignment types:
 Windows Virtual Desktop Consent Page https://rdweb.wvd.microsoft.com/
 
 
-## Windows Virtual Desktop Cmdlets for Windows PowerShell
-
-**Install the Windows Virtual Desktop PowerShell module**
-
-`Install-Module -Name Microsoft.RDInfra.RDPowerShell`
-
-**Import the Windows Virtual Desktop PowerShell module (If necessary)**
-
-`Import-Module -Name Microsoft.RDInfra.RDPowerShell`
-
-**Update the Windows Virtual Desktop PowerShell module**
-
-`Update-Module -Name Microsoft.RDInfra.RDPowerShell`
-
-**Sign in to the Windows Virtual Desktop environment**
-
-`Add-RdsAccount -DeploymentUrl "https://rdbroker.wvd.microsoft.com"`
-
-**View the role assignments on a Windows Virtual Desktop Tenant**
-
-`Get-RdsRoleAssignment -TenantName yourtenantname`
-
-OR
-
-`Get-RdsRoleAssignment`
-
-The Get-RdsRoleAssignment cmdlet lists all role assignments such as RDS Owner, RDS Contributor, RDS Reader and RDS Operator.
-
-**Assign the RDS Owner role on a Windows Virtual Desktop Tenant**
-
-`New-RdsRoleAssignment -TenantName yourtenantname -SignInName username@contoso.onmicrosoft.com -RoleDefinitionName "RDS Owner"`
-
-**Get properties of a Host Pool**
-
-`Get-RdsHostPool -TenantName yourtenantname`
-
-The Get-RdsHostPool cmdlet gets the properties of the specified host pool. If you do not specify a host pool, this cmdlet returns properties for all host pools in the specified tenant authorized for the current user.
-
-**Add Users to an App Group**
-
-`Add-RdsAppGroupUser <tenantname> <hostpoolname> "Desktop Application Group" -UserPrincipalName <userupn>`
-
-The user’s UPN should match the user’s identity in Azure Active Directory (for example, user1@contoso.com). If you want to add multiple users, you must run this cmdlet for each user.
-
 
 
 
