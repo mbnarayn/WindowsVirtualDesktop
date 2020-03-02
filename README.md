@@ -47,12 +47,6 @@ Windows Virtual Desktop Consent Page https://rdweb.wvd.microsoft.com/
 
 ## PowerShell Commands
 
-### Add an authenticated account to use for Windows Virtual Desktop cmdlet requests
-
-`Add-RdsAccount -DeploymentUrl "https://rdbroker.wvd.microsoft.com"`
-
-The Add-RdsAccount cmdlet adds an authenticated account to use for Windows Virtual Desktop cmdlet requests. Upon completion, the context is automatically set to use the "Default Tenant Group" as the tenant group name. You can run the Set-RdsContext cmdlet to change the context.
-
 ### Get properties of a Host Pool
 
 `Get-RdsHostPool -TenantName yourtenantname`
@@ -83,6 +77,14 @@ The Get-RdsRoleAssignment cmdlet lists all role assignments such as RDS Owner, R
 
 `Update-Module -Name Microsoft.RDInfra.RDPowerShell`
 
+**Sign in to the Windows Virtual Desktop environment**
 
+`Add-RdsAccount -DeploymentUrl "https://rdbroker.wvd.microsoft.com"`
+
+**Add users to the desktop application group**
+
+`Add-RdsAppGroupUser <tenantname> <hostpoolname> "Desktop Application Group" -UserPrincipalName <userupn>`
+
+The user’s UPN should match the user’s identity in Azure Active Directory (for example, user1@contoso.com). If you want to add multiple users, you must run this cmdlet for each user.
 
 
