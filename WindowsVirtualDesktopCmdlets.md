@@ -72,6 +72,9 @@ The user’s UPN should match the user’s identity in Azure Active Directory (f
 
 You must first remove all session hosts and app groups associated with the host pool before running this command.
 
+**List all users assigned to an app group**
+
+`Get-RdsAppGroupUser -TenantName "contoso" -HostPoolName "contosoHostPool" -AppGroupName "Desktop Application Group"`
 
 
 
