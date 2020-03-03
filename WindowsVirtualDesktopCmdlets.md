@@ -76,6 +76,10 @@ You must first remove all session hosts and app groups associated with the host 
 
 `Get-RdsAppGroupUser -TenantName "contoso" -HostPoolName "contosoHostPool" -AppGroupName "Desktop Application Group"`
 
+**Get all session hosts in the host pool**
+
+`Get-RdsSessionHost -TenantName "contoso" -HostPoolName "contosoHostPool"`
+
 
 
 
