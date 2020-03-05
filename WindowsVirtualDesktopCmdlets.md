@@ -78,7 +78,7 @@ You must first remove all session hosts and app groups associated with the host 
 
 **Create new registration information for a host pool**
 
-New-RdsRegistrationInfo -TenantName <tenantname> -HostPoolName <hostpoolname> -ExpirationHours 6 | Select-Object -ExpandProperty Token | Out-File -FilePath C:\Token\Token.txt
+`New-RdsRegistrationInfo -TenantName <tenantname> -HostPoolName <hostpoolname> -ExpirationHours 6 | Select-Object -ExpandProperty Token | Out-File -FilePath C:\Token\Token.txt`
 
 **List all users assigned to an app group**
 
