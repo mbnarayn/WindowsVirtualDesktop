@@ -1,5 +1,9 @@
 # Windows Virtual Desktop
 
+Windows Virtual Desktop is a desktop and app virtualization service that runs on Microsoft Azure. Windows Virtual Desktop or WVD for short is a Desktop as a Service offering that provides the capability to publish full desktops or individual remote apps. With WVD, all the infrastructure services, such as brokering, web access, load-balancing, management and monitoring is all automatically setup and managed by the Microsoft Azure platform. As it is no longer necessary to run or manage any of the traditional RDS roles such as the License Server, Connection Broker or Gateway servers, the associated costs to host and manage these servers are eliminated.
+
+Windows Virtual Desktop also provides the capability to run Windows 10 multi-session. Windows 10 Enterprise multi-session can't run in on-premises production environments because it's optimized for the Windows Virtual Desktop service for Azure. Windows 10 Enterprise multi-session, formerly known as Windows 10 Enterprise for Virtual Desktops (EVD), is a new Remote Desktop Session Host that allows multiple concurrent interactive sessions. Previously, only Windows Server could do this. This capability gives users a familiar Windows 10 experience while IT can benefit from the cost advantages of multi-session and use existing per-user Windows licensing instead of RDS Client Access Licenses (CALs).
+
 ## High Level Components
 
 The high level components that make up Windows Virtual Desktop are a Tenant Group, Tenant, Host Pool and App Groups.
