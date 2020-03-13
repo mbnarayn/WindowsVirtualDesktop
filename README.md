@@ -49,6 +49,10 @@ A Persistent or Personal host pool supports two user assignment types:
 
 Windows Virtual Desktop Consent Page https://rdweb.wvd.microsoft.com/
 
+## WVD Session Host Firewall Configuration
+
+That session host establishes a reverse connection back to the Remote Desktop Client through the Azure WVD Gateway Service. WVD allows users to securely establish sessions through reverse connections to the service, so no inbound ports need to be open on the Session Host. The only port that needs to be allowed from the session hosts is outbound TCP 443.
+
 
 
 
