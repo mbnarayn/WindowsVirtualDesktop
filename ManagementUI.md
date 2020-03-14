@@ -14,7 +14,7 @@ Before deploying the management tool, you'll need an Azure Active Directory (Azu
  
 Note: When deploying the management tool, an option to use a Service Principal is presented, however at this time (1st of March 2020) using a Service Principal that meets the above requirements still does not work and results in various errors. 
  
-**Issues that I encountered**
+**Issues Encountered**
  
 •	Attempting to deploy the management tool with a Service Principal (Contribute and Owner) that has all the required permissions does not work as for some reason it fails to create an Automation Account which is one of the deployment steps. So, I reverted to using a standard account with all the necessary privileges.
 
