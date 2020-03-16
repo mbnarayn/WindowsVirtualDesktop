@@ -88,6 +88,11 @@ You must first remove all session hosts and app groups associated with the host 
 
 `Get-RdsSessionHost -TenantName "contoso" -HostPoolName "contosoHostPool"`
 
+**Remove a session host that has no active sessions**
+
+`Remove-RdsSessionhost -TenantName "contoso" -HostPoolName "contosoHostPool" -Name "sh1.contoso.com"`
+
+
 
 
 
