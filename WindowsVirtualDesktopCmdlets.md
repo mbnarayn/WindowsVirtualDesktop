@@ -100,6 +100,9 @@ You must first remove all session hosts and app groups associated with the host 
 
 `Remove-RdsAppGroup -TenantName "contoso" -HostPoolName "contosoHostPool" -Name "officeApps"`
 
+**Remove a Host Pool**
+
+`Remove-RdsHostPool -TenantName "contoso" -Name "contosoHostPool"`
 
 
 
